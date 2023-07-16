@@ -1,0 +1,134 @@
+<div class="dashboard">
+  <div id="viewport">
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <header>
+        <a href="#">Jchef</a>
+      </header>
+      <ul class="nav">
+        <li>
+          <a
+            [routerLink]="'/admin/dashboard/tables'"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            Tables
+          </a>
+        </li>
+        <!-- <li>
+          <a
+            [routerLink]="'/admin/dashboard/waiter'"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+          waiter
+          </a>
+        </li> -->
+        <li>
+          <a
+            [routerLink]="'/admin/dashboard/Categories'"
+            routerLinkActive="active"
+          >
+            Categories
+          </a>
+        </li>
+        <!-- <li>
+          <a
+            [routerLink]="'/admin/dashboard/products'"
+            routerLinkActive="active"
+          >
+            Products
+          </a>
+        </li> -->
+
+        <li
+          class="position-static"
+          ngbDropdown
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="dropdown-toggle text-align-left dropdown_link_dashboard" ngbDropdownToggle>
+            Products
+          </a>
+          <div
+            ngbDropdownMenu
+            aria-labelledby="dropdownBasic1"
+            id="drop_container"
+          >
+            <li>
+              <a ngbDropdownItem routerLink="/admin/dashboard/products/display">
+                Display Products
+              </a>
+            </li>
+            <li>
+              <a ngbDropdownItem routerLink="/admin/dashboard/products/add">
+                Add Products
+              </a>
+            </li>
+          </div>
+        </li>
+
+        <li>
+          <a [routerLink]="'/admin/dashboard/users'" routerLinkActive="active">
+            Users
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLink]="'/admin/dashboard/ingridents'"
+            routerLinkActive="active"
+          >
+            Ingridents
+          </a>
+        </li>
+        <!-- <li>
+          <a
+            [routerLink]="'/admin/dashboard/kitchen'"
+            routerLinkActive="active"
+          >
+            Kitchen
+          </a>
+        </li> -->
+        <li>
+          <a
+            [routerLink]="'/admin/dashboard/reservation'"
+            routerLinkActive="active"
+          >
+            Reservation
+          </a>
+        </li>
+        <!-- <ul class="nav">
+          <li
+            class="nav-item position-static"
+            ngbDropdown
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <button
+              class="nav-link dropdown-toggle btn w-100"
+              ngbDropdownToggle
+            >
+              Toggle dropdown
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem routerLink="/admin/dashboard/Categories">
+                Categories
+              </button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+          </li>
+        </ul> -->
+        <!-- <li>
+          <a routerLink="books" routerLinkActive="active">Books</a>
+        </li> -->
+      </ul>
+    </div>
+    <!-- Content -->
+    <div id="content">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
